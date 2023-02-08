@@ -1,0 +1,57 @@
+https://www.reddit.com/t/advertising/
+Best Advertising Posts - Reddit
+
+<START>Posts about Advertising
+German ad agency looking for AI prompter... here we go
+‘We’re going after creatives that greenwash fossil fuels’: the group targeting ad agencies | Jamie Henn, the founder of Fossil Fuel Free Media, on how advertising agencies help legitimise the fossil fuel industry
+I can't do this until i am 65. What comes after working for almost 20 years in advertising agencies?
+Title sounds dramatic, eh? ;) But seriously, i am kind of exhausted. Working in an agency, as you might imagine, is stressful. I started in the early 2000s and i live in Europe (non english speaking). I worked hard and I mostly enjoyed the fast paced ever changing agencylife. I did a wide range of projects, from TV campaigns, Online Advertising, Websites or even Apps. Agile, waterfall, scrumban whatever - you name it. For big brands in the biggest agencies. From Junior Projectmanager to, now, Teamlead.
+But as i turn 40 soon and my parents died this year i paused and looked in the mirror to ask myself: what now boy, what now.
+I want a bit more security and sustainability. I dont want to work my ass of for nothing and then drop dead with 67.
+So i said to myself: maybe i need to get some international insights in which direction i could develop. Of course i already did some thinking by myself :-D
+
+- Working in a mid sized company in the countryside in marketing/branding/IT. Outside the stressfulcity where a lack of skilled and experienced workers might occur.
+- Switching the industry: i love games but rarely play. I could do project management or even become a PO for something not to big? Or work in marketing there? Is the gamng industry maybe even more stressful?
+- Teaching my field of work? Maybe i should switch to an educational job? anyone with experience on this here?
+- No escape, so deep dive even more: Move to a more cosmopolitan city like London, Paris or even NY and work there for someone "really big".
+- Switch to a SaaS-Company. I can manage clients, UX/UI and devs. But a SaaS company might give a bit more security than an digital-agency?
+
+So what are your experiences? Maybe you had a similar journey and could share your insights or give some hints. Or just tell me my ideas are nonsense :D
+
+Thank you :)
+How Ad Agencies Lost A Key Competitive Advantage Thanks To Algorithms
+It’s no secret that traditional advertising agencies have been in trouble lately. As of today, over the past 1 year WPP is down -31.67%, Omnicom is down –8.54% and Publicis is down –8.94%. The usual narrative for the decline is “shift to digital”, “technological disruption” and “corporate advertising spend cuts”. The culprits usually being Google and Facebook, the easy targets to point your finger at.
+It makes sense to blame the 2 companies, together Google and Facebook currently make up for 61% of online advertising spend and 25% of total advertising spend. Take a look at this graph
+But how exactly are these 2 companies hurting the traditional ad agencies business model? Can’t traditional ad agencies manage Google and Facebook campaigns for their clients? Can’t they just continue to buy media from Google/Facebook on behalf of their clients?
+Let’s take a closer look…
+One of the competitive advantages large ad agencies had was the media buying rates they had access to, because of the volume of media they regularly purchased. Imagine all of the TV spots, billboards, magazine space and radio time that large ad agencies had to collective buy on behalf of ALL their clients. Their huge volumes enabled them to negotiate and get the best rates possible for across all sorts of media and form strong relationships with traditional media outlets.
+Armed with the best rates and strong media relationships, these ad agencies could approach their clients and offer huge cost savings if they hired them. If a company like Proctor and Gamble wanted to run an advertising campaign, they would have saved a ton of money by going through an ad agency compared to trying to buy all that media on their own.
+So what happened?
+Well… algorithms.
+Those of you that are unfamiliar with how media buying works on Google/Facebook, it is an automated bidding system. Advertisers basically place bids on various keywords or target audiences for their ad copy to be seen, and highest bidder gets their ad shown more often (I know there are a lot more intricacies involved, but that’s besides the point I’m making here). The fact is that an algorithmic auction system determines what you pay for advertising/media.
+It doesn’t matter how much media you buy from Google/Facebook, everyone virtually gets the exact same rates. Whether you are a massive ad agency, a conglomerate like Proctor and Gamble, or a small boutique digital marketing company (like my own, ClientFlo), no one receives privileged media rates.
+Algorithmic media buying has effectively democratized advertising.
+As larger portions of advertising budgets are being allocated to Google and Facebook, traditional ad agencies are being dropped left, right and center. Without the cost advantage large ad agencies once provided, it make sense for companies to just manage their own campaigns with Google/Facebook experts in-house. It’s similar to being able to buy directly from the manufacturer as opposed to buying from the distributor and paying a markup.
+Alternatively it may even make sense for companies to hire boutique agencies that specialize in Google or Facebook and charge lower fees, as they have access to the same media rates as larger ad agencies.
+There are other reasons beyond just cost why advertising budgets are being allocated directly to digital media outlets like Google/Facebook. Other compelling capabilities digital media outlets offer are:
+Transparency in ad spend – money spent on digital media is fully transparent as it is very easy to track every single dollar, and what you received for each dollar. Both Google/Facebook utilize the CPC and CPM models (cost per click/cost per impression), so you know exactly what each dollar got you. For example, for my company PureFilters, I know with a very high degree of certainty that our acquisition cost on Google Adwords is roughly $10 per customer. With traditional media, you may see your “ad spend/media cost”, but you don’t know exactly how many impressions/actions that really got you as well you don’t know if there are hidden fees, rebates to the agency, etc.
+Data-driven decisions – with digital media you are ability to make instant decision with real-time data. This virtually eliminates any guesswork, you don’t need to wonder whether an advertisement is working or not. With data-driven media, everything is calculated and tracked, so you are able to cut under-performing campaigns and focus your budget on the top ones.
+There is an old quote by John Wanamaker :
+“Half the money I spend on advertising is wasted; the trouble is I don’t know which half.”
+…well which digital media you know exactly which half is wasted, and have the ability to cut that half out, almost instantly.
+Easy Scaling – Digital media is very easily scalable. You can reach the masses with just a few clicks of a button. This is a stark contrast to traditional media where you would have to work with several different outlets simultaneously to obtain the equivalent reach.
+Effective Targeting – digital media has superior targeting capabilities. You can tailor your ad copies and messaging for different audiences, and hone in on your best customers. This rapidly increases efficiencies in ad spend and cuts the out the money that is wasted. Consumers are show ads that are actually relevant to them, rather than being annoyed by a bunch of advertisements with products/services they don’t care about.
+When is comes spending money on digital media ad agencies are increasingly becoming unnecessary middlemen in the advertising supply chain.
+As you can see from the graph above, Google/Facebook alone account for 25% of global ad spend now. Beyond just Google/Facebook, many other smaller digital media networks also utilize similar algorithmic media buying. Digital media continues to grow at a rapid rate, and since traditional ad agencies cannot obtain a cost advantage from buying digital media, they need to figure out different ways to add more value.
+A couple ideas I had for ad agencies to add value were:
+Proprietary data collection – imagine the user/customer data large agencies could collect and sell back to their clients or even just utilize it for their clients campaigns.
+Buy/control/develop niche assets – this could give their clients access to customers that they couldn’t access on Google/Facebook.
+I don’t believe large ad agencies will collapse, traditional media buying still exists and will continue to attract money. However, unless these agencies figure out a better way to adapt, their business enterprises are going to continue to decline.
+Apple beefs up smartphone services in ‘silent war’ against Google, as it enhances maps, search and online advertising on iOS
+What is Tesla Advertising budget exactly?
+Shinichi Ueno, former president of advertising agency ADK Holdings Inc., has changed his tune and is now expected to admit to charges of bribing a Tokyo Olympic official, sources said. His trial is expected to start in mid-February
+Drugs with bigger TV advertising budgets are typically of "low therapeutic value," study says
+Top Communities
+types
+Similar Topics
+<EOS>

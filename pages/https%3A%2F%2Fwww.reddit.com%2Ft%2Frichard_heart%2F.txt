@@ -1,0 +1,66 @@
+https://www.reddit.com/t/richard_heart/
+Best Richard Heart Posts - Reddit
+
+<START>Posts about Richard Heart
+SBF WAS TROLLED ON THE BLOCKCHAIN BY RICHARD HEART OF PULSECHAIN
+What's up Superstonk, GME Token guy back with another hit piece about the blockchain. I have made some serious progress and in the works of putting together my most informative post yet. I have continued my investigations into the GME Token about anything and everything related to it. The depth and extent of collusion between the elites revolving around it, have become evidently clear. This post will not get into to the major revelations I have uncovered, but it will touch on some hilariously epic blockchain trolling I happened to come across during my investigations. So, with that said, let's get right into it.
+TLDR; Token created by pulsechain with the name SoyBoyFried and Symbol SOYCONMAN and sent to FTX 69 Tokens at a time.
+As most already know there is an undisputed connection to SBF and FTX to the Tokenization of GameStop. As I explored the transactions of FTX Exchange 2 I came to what is a set of 2 epic trolls using the blockchain. We will begin by starting with the GME Token Holders shown here.
+Here we can see the number 2 holder is FTX Exchange 2 and holds 1,000,000 GME Tokens. You can then click on the wallet address which takes you here.
+These are the last transactions by the FTX Exchange 2 before the wallet was fully liquidated. As I have mentioned in my previous posts there always seems to be a connection to pulsechain and here is no different. Knowing this I decided to examine the interaction between the 2 wallet addresses. Before we do this, it is important to note that the day after the interaction with pulsechain the wallet was liquidated of almost all ETH that it contained to the wallet shown below. You can see that there was a total of about 1,938 ETH transferred out to another wallet which is where it remains to this day. Going to that wallet it shows that it still has the balance from the FTX Transfer.
+Someone clearly noticed this and decided to troll them by creating a wallet specifically designed to do that. That wallet then went on to send out 5 transactions for exactly 1 Penny in a matter of 5 minutes. The trolling was not just simply the 1 Penny transactions, but also the name of the wallet they used to send it. Here we can see those transactions into the ETH deposited wallet.
+This shows the wallet that sent the transactions was named "sbfwhat.eth" possibly a reference to the movie Friday in the scene with Deebo, "what bike". We can see by clicking on the wallet that the name and penny transactions were for the sole purpose of this troll.
+The wallet was created on 11/14/22 and the first transaction it performed was an ENS request to rename the wallet from an anonymous name to sbfwhat.eth. It then performed the 5 trolling transactions for 1 Penny on 11/18/22 and cashed out the balance with the last transaction. This was the entirety of the use for this troll wallet. Here we can see one of the 1 Penny transactions.
+NOW IF YOU THINK THAT IS TOP NOTCH TROLL JUST WAIT UNTIL I SHOW YOU THE NEXT ONE. Let's now bring this post back to the pulsechain transactions with the FTX Exchange 2 wallet. If we then click on the last transaction between these 2 wallets here is what it shows.
+At first glance it doesn't appear to be showing anything, let alone an EPIC TROLL. It is not until we go to the ERC20 Token Txns Tab for the wallet that we can see this. Once on that page we can scroll down to where is shows a series of ERC-20 Token transfers from pulsechain to FTX 2. Here it shows there were 26 Transfers from pulsehchain all for exactly 69 Tokens.
+The number of Tokens sent seemed pretty funny, but it wasn't until I looked at the name of the Token, that it became hilarious. After seeing the name of the Token it was clear that this was an obvious troll by Richard Heart and an Epic one at that. Here you can see the name of the Token that he created and sent to SBF/FTX for this sole purpose.
+The Token name was "SoyBoyFried" and the Symbol for the Token is "SOYCONMAN". This contract was clearly created by pulsechaincom.eth and is shown as the contract creator. If that is not an epic troll on the blockchain, I don't know what is. Here we can see all the Holders for this Token.
+If you then look at the Transfers for this Token you can see that ALL THE TRANSACTIONS in which pulsechain sent out these Tokens to the Holders above were for 69 Tokens each. It appears that Richard Heart was not only trolling SBF, but he is trolling Crypto.com and Blockfolio as well. Here are the Contract and Token Addresses with links to confirm.
+"Contract Address"
+"SoyBoyFried Token"
+I hope you enjoyed and got a laugh from this journey through the blockchain. There is a lot more to come, so stay tuned. If you haven't had a chance to look at my previous posts, please check them out. I will continue to leave bread crumb trails to all my posts for historical purposes. My previous post can be found here.
+"MAJOR PLAYERS AND THE GME TOKEN - PART 3"
+Hex crypto down as creator Richard Heart faces fraud accusations
+https://crypto.news/hex-threatens-to-implode-as-creator-richard-heart-faces-fraud-accusations/
+Personally do not own any hex crypto but i have a close friend with a massive stake in it (tens of thousands usd worth.) Really worried for him once this does implode.
+We have seen how absurd apr or returns are impossible to sustain with things such as Luna.
+Although I am disappointed for all those that will lose money to this fraud (see Richard Heart instagram) this is what needs to happen for crypto to be taken serious.
+Haters said $HEX was a scam before Richard Heart even launched it and they also said that it would never launch. Today it has been over 3 yrs since the contract was deployed. That's 1161 days of flawless operation, no bugs, no exploits, no rugpull, no hacks, no scam... HEX is 👑
+Any sign of Richard Heart?
+After V3 announcement a week ago, I haven’t seen any activity.
+Andrew S. Grove vs. Richard Heart - Who would win?
+richard heart warned u but u didnt listen
+all this fud on hex... price was going to under a penny regardless of FUD. just look at the chart, richard even told people btc was going to 11k. did people really believe hex would go up with BTC going down -38% + (from current prices ?)
+ive been on cash since may. knew not to buy hex at 18c. been patiently waiting for 1c but now im waiting for 0.008c to start buying. be smart. dont be tied no any coin and most importantly dont be led by your emotions! ive been in crypto for 7 years. i know how this all works out!
+
+THE MORE FUD THE MORE CLOSE WE ARE TO THE BOTTOM.
+0.007c is 55x from ATH, and 110x+ from $1.
+Breakdown of PulseChain Clients shared by Richard Heart
+In Richard Heart's latest update tweet, he mentioned 4 PulseChain clients. Many are still asking what these are - here is a breakdown:
+
+go-pulse
+go-pulse is a fork of go-ethereum (Geth). Go is simply a programming language, Geth is a Go implementation of Ethereum. Geth is an execution client that handles transactions, deployment, and execution of smart contracts and contains the Ethereum Virtual Machine (EVM).
+
+prysm-pulse
+prysm-pulse is a fork of Prysm, a Go implementation of the Ethereum consensus protocol, and is currently the largest consensus client. It contains a full beacon node implementation as well as a validator client for participating in blockchain consensus.
+
+erigon-pulse
+erigon-pulse is a fork of Erigon, which is a fork of Geth - meaning it is another execution client written in Go. Erigon implemented changes to the full sync algorithm and storage system, allowing you to sync an Ethereum archive node much faster and using less disk space.
+
+lighhouse-pulse
+lighhouse-pulse is a fork of Lighthouse, a consensus client written in Rust. Lighthouse is currently the second-largest consensus client next to Prysm, and is built with a focus on speed and security.
+
+Summary
+To summarize, Richard Heart shared 4 clients for PulseChain.
+2 are execution clients, 2 are consensus clients.
+Execution Clients
+Geth
+Erigon
+Consensus Clients
+Prysm
+Lighthouse
+The Execution Clients listen and execute transactions and maintain the latest state and database of all PulseChain data, while the Consensus Clients provide consensus (using PoS algorithm) from validated data from the Execution Client.
+Just in case ya'll already forgot: Everyone in crypto stole your coins. Your fav "influencers" shilled rugs because they got paid to promote them... But Richard Heart advised you to never give up your keys or invest in projects with admin keys. HEX makes middlemen in crypto obsolete!🚫admin keys!
+Top Communities
+Similar Topics
+<EOS>
