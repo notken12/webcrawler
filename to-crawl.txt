@@ -1,5 +1,3 @@
-https://www.reddit.com/t/astrazeneca/chunkCSS/CollectionCommentsPage~CommentsPage~EconTopAwardersModal~ModQueuePages~ModerationPages~PostCreation~~bca2b657.1f6587790ced00d01321_.css
-https://www.reddit.com/t/astrazeneca/chunkCSS/CollectionCommentsPage~CommentsPage~GovernanceReleaseNotesModal~ModerationPages~PostCreation~Profile~9a5d9fab.5280f54325366299a5fb_.css
 https://www.reddit.com/t/astrazeneca/chunkCSS/CollectionCommentsPage~CommentsPage~ProfileComments~ProfileOverview~ProfilePrivate~StandalonePostPag~0596d05c.dc87e60a39a0d9454940_.css
 https://www.reddit.com/t/astrazeneca/chunkCSS/reddit-components-LargePost.dd9c2ae80703340e2b7c_.css
 https://www.reddit.com/r/india/

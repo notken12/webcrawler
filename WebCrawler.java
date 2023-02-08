@@ -116,10 +116,10 @@ class Page {
 public class WebCrawler {
     public static void main(String[] args) {
         try {
-            Document doc = Jsoup.parse("<p>a<span> dog</span>mogo</p><p>sog</p>");
-            System.out.println(doc.text());
-            Elements e = doc.select("p, span");
-            System.out.println(e.text());
+            // Document doc = Jsoup.parse("<p>a<span> dog</span>mogo</p><p>sog</p>");
+            // System.out.println(doc.text());
+            // Elements e = doc.select("p, span");
+            // System.out.println(e.text());
 
             HashMap<String, Boolean> alreadyCrawled = new HashMap<>();
             ArrayList<String> linksCrawled = new ArrayList<>();
