@@ -89,7 +89,7 @@ class Page {
         ArrayList<URL> urls = new ArrayList<>();
         for (Element link : links) {
             try {
-                urls.add(new URL(url, link.attr("href")));
+                urls.add(new URL(url, link.attr("href").split("#")[0]));
             } catch (Exception e) {
                 System.out.println("Invalid url in a href: " + e);
             }
@@ -194,6 +194,7 @@ public class WebCrawler extends Thread {
             String link = linksToCrawl.remove(0);
             alreadyCrawled.put(link, true);
             linksCrawled.add(link);
+            Files.write(linksCrawledPath, (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
 
             List<String> lines = Files.readAllLines(linksToCrawlPath);
             if (lines.size() > 0) {
@@ -212,10 +213,13 @@ public class WebCrawler extends Thread {
 
                 // System.out.println("text");
                 // System.out.println(page.getTextContent());
-                Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
-                page.getTextContent().getBytes());
+                String content = page.getTextContent();
+                if (content.length() > 200) {
+                    Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
+                    content.getBytes());
+                }
 
-                Files.write(linksCrawledPath, (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
+
 
                 for (URL linkToAdd : page.getLinks()) {
                     if (alreadyCrawled.get(linkToAdd.toString()) == null) {
