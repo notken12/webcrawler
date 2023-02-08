@@ -1,1 +1,1 @@
-javac -cp ".:lib/*" WebCrawler.java && java -cp ".:lib/*" WebCrawler crawled-pages.txt to-crawl.txt pages/
+javac -cp ".:lib/*" WebCrawler.java && java -cp ".:lib/*" WebCrawler crawled-pages.txt to-crawl.txt pages/ 30

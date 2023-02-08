@@ -115,7 +115,22 @@ class Page {
     }
 }
 
-public class WebCrawler {
+public class WebCrawler extends Thread {
+    static HashMap<String, Boolean> alreadyCrawled;
+    static ArrayList<String> linksCrawled;
+    static ArrayList<String> linksToCrawl;
+    static File linksToCrawlFile;
+    static Path linksToCrawlPath;
+    static Path linksCrawledPath;
+    static Path pagesDir;
+
+    int threadNum;
+    static int totalThreads;
+
+    public WebCrawler(int threadNum) {
+        this.threadNum = threadNum;
+    }
+
     public static void main(String[] args) {
         try {
             // Document doc = Jsoup.parse("<p>a<span> dog</span>mogo</p><p>sog</p>");
@@ -123,17 +138,16 @@ public class WebCrawler {
             // Elements e = doc.select("p, span");
             // System.out.println(e.text());
 
-            HashMap<String, Boolean> alreadyCrawled = new HashMap<>();
-            ArrayList<String> linksCrawled = new ArrayList<>();
-            ArrayList<String> linksToCrawl = new ArrayList<>();
 
-            File linksToCrawlFile = null;
-            Path linksToCrawlPath = null;
-            Path pagesDir = null;
+            alreadyCrawled = new HashMap<>();
+            linksCrawled = new ArrayList<>();
+            linksToCrawl = new ArrayList<>();
 
-            if (args.length >= 3) {
+            if (args.length >= 4) {
+                linksCrawledPath = Paths.get(args[0]);
                 linksToCrawlPath = Paths.get(args[1]);
                 linksToCrawlFile = new File(args[1]);
+                totalThreads = Integer.parseInt(args[3]);
                 pagesDir = Paths.get(args[2]);
 
                 Scanner reader = new Scanner(linksToCrawlFile);
@@ -152,57 +166,87 @@ public class WebCrawler {
                 // toCrawlReader = new FileReader(linksToCrawlFile);
                 // crawledWriter = new FileWriter(linksCrawledFile, true);
 
+                for (int i = 0; i < totalThreads; i++) {
+                    WebCrawler thread = new WebCrawler(i);
+                    thread.start();
+                }
+
             } else {
                 System.out.println(
-                        "Please provide arguments: crawled pages, pages to crawl, directory to store crawled pages.");
+                        "Please provide arguments: crawled pages, pages to crawl, directory to store crawled pages, total # of threads.");
                 return;
             }
 
-            while (linksToCrawl.size() > 0) {
-                // Crawl
-                String link = linksToCrawl.remove(0);
-                alreadyCrawled.put(link, true);
-                linksCrawled.add(link);
-
-                List<String> lines = Files.readAllLines(linksToCrawlPath);
-                if (lines.size() > 0) {
-                    lines.remove(0);
-                }
-                Files.write(linksToCrawlPath, (String.join("\n", lines)).getBytes());
-
-                Request req = new Request(link);
-                Page page = req.getPage();
-
-                if (page != null) {
-                    System.out.println(link);
-
-                    // System.out
-                    // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
-
-                    // System.out.println("text");
-                    // System.out.println(page.getTextContent());
-                    Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
-                    page.getTextContent().getBytes());
-
-                    Files.write(Paths.get(args[0]), (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
-
-                    for (URL linkToAdd : page.getLinks()) {
-                        if (alreadyCrawled.get(linkToAdd.toString()) == null) {
-                            linksToCrawl.add(linkToAdd.toString());
-                            alreadyCrawled.put(linkToAdd.toString(), true);
-
-                            Files.write(Paths.get(args[1]), (linkToAdd.toString() + "\n").getBytes(),
-                                    StandardOpenOption.APPEND);
-                        }
-                    }
-                }
-            }
+            
         } catch (
 
         Exception e) {
             e.printStackTrace();
             return;
         }
+
+    }
+
+    public void run() {
+        while (linksToCrawl.size() > 0) {
+            try {
+            // Crawl
+            String link = linksToCrawl.remove(0);
+            alreadyCrawled.put(link, true);
+            linksCrawled.add(link);
+
+            List<String> lines = Files.readAllLines(linksToCrawlPath);
+            if (lines.size() > 0) {
+                lines.remove(0);
+            }
+            Files.write(linksToCrawlPath, (String.join("\n", lines)).getBytes());
+
+            Request req = new Request(link);
+            Page page = req.getPage();
+
+            if (page != null) {
+                System.out.println("Thread "+ threadNum + " crawled " + link);
+
+                // System.out
+                // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
+
+                // System.out.println("text");
+                // System.out.println(page.getTextContent());
+                Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
+                page.getTextContent().getBytes());
+
+                Files.write(linksCrawledPath, (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
+
+                for (URL linkToAdd : page.getLinks()) {
+                    if (alreadyCrawled.get(linkToAdd.toString()) == null) {
+                        linksToCrawl.add(linkToAdd.toString());
+                        alreadyCrawled.put(linkToAdd.toString(), true);
+
+                        Files.write(linksToCrawlPath, (linkToAdd.toString() + "\n").getBytes(),
+                                StandardOpenOption.APPEND);
+                    }
+                }
+            }
+        } catch(Exception e) {
+            System.out.println("Exception in thread " + threadNum);
+            System.out.println(e);
+        }
+        }
+    }
+}
+
+class CrawlerThread extends Thread {
+    int id;
+    int total;
+    HashMap<String, Boolean> alreadyCrawled;
+
+    public CrawlerThread(int id, int total, HashMap alreadyCrawled) {
+        this.id = id;
+        this.total = total;
+        this.alreadyCrawled = alreadyCrawled;
+    }
+
+    public void run() {
 
     }
 }
