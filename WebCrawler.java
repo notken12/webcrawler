@@ -96,10 +96,15 @@ class Page {
     }
 
     public String getTextContent() {
-        return html.replaceAll("\\<.*?\\>", "");
+        String textContent = "";
+        Elements elements = doc.select("p,h1,h2,h3,h4,h5,h6");
+        for (Element e : elements) {
+            textContent = e.text() + "\n";
+        }
+        return textContent;
     }
 
-    public Document getDoc() {
+    private Document getDoc() {
         if (html == null)
             return null;
 
@@ -172,7 +177,7 @@ public class WebCrawler {
                     // System.out
                     // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
 
-                    // System.out.println(page.getTextContent());
+                    System.out.println(page.getTextContent());
                     // Files.write(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())),
                     // page.getTextContent().getBytes());
 
