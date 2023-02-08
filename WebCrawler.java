@@ -5,7 +5,9 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.net.http.HttpResponse.ResponseInfo;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -96,12 +98,12 @@ class Page {
     }
 
     public String getTextContent() {
-        String textContent = "";
+        String textContent = url.toString() + "\n" + doc.select("title").text() + "\n\n<START>";
         Elements elements = doc.select("p,h1,h2,h3,h4,h5,h6");
         for (Element e : elements) {
-            textContent = e.text() + "\n";
+            textContent += e.text() + "\n";
         }
-        return textContent;
+        return textContent + "<EOS>";
     }
 
     private Document getDoc() {
@@ -177,9 +179,10 @@ public class WebCrawler {
                     // System.out
                     // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
 
-                    System.out.println(page.getTextContent());
-                    // Files.write(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())),
-                    // page.getTextContent().getBytes());
+                    // System.out.println("text");
+                    // System.out.println(page.getTextContent());
+                    Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
+                    page.getTextContent().getBytes());
 
                     Files.write(Paths.get(args[0]), (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
 
