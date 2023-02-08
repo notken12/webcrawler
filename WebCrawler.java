@@ -89,7 +89,9 @@ class Page {
         ArrayList<URL> urls = new ArrayList<>();
         for (Element link : links) {
             try {
-                urls.add(new URL(url, link.attr("href").split("#")[0]));
+                String[] segments = link.attr("href").split("#");
+                if (segments.length > 0)
+                    urls.add(new URL(url, link.attr("href").split("#")[0]));
             } catch (Exception e) {
                 System.out.println("Invalid url in a href: " + e);
             }
@@ -138,7 +140,6 @@ public class WebCrawler extends Thread {
             // Elements e = doc.select("p, span");
             // System.out.println(e.text());
 
-
             alreadyCrawled = new HashMap<>();
             linksCrawled = new ArrayList<>();
             linksToCrawl = new ArrayList<>();
@@ -149,6 +150,8 @@ public class WebCrawler extends Thread {
                 linksToCrawlFile = new File(args[1]);
                 totalThreads = Integer.parseInt(args[3]);
                 pagesDir = Paths.get(args[2]);
+
+                Files.createDirectories(pagesDir);
 
                 Scanner reader = new Scanner(linksToCrawlFile);
                 while (reader.hasNextLine()) {
@@ -166,6 +169,16 @@ public class WebCrawler extends Thread {
                 // toCrawlReader = new FileReader(linksToCrawlFile);
                 // crawledWriter = new FileWriter(linksCrawledFile, true);
 
+                Runtime.getRuntime().addShutdownHook(new Thread() {
+                    public void run() {
+                        try {
+                            Files.write(linksToCrawlPath, (String.join("\n", linksToCrawl)).getBytes());
+                        } catch (Exception e) {
+                            System.out.println("Failed to gracefully shutdown and write links to crawl to file: " + e);
+                        }
+                    }
+                });
+
                 for (int i = 0; i < totalThreads; i++) {
                     WebCrawler thread = new WebCrawler(i);
                     thread.start();
@@ -177,7 +190,6 @@ public class WebCrawler extends Thread {
                 return;
             }
 
-            
         } catch (
 
         Exception e) {
@@ -188,53 +200,57 @@ public class WebCrawler extends Thread {
     }
 
     public void run() {
-        while (linksToCrawl.size() > 0) {
+        while (true) {
             try {
-            // Crawl
-            String link = linksToCrawl.remove(0);
-            alreadyCrawled.put(link, true);
-            linksCrawled.add(link);
-            Files.write(linksCrawledPath, (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
+                if (linksToCrawl.size() > 0) {
+                    // Crawl
+                    String link = linksToCrawl.remove(0);
+                    alreadyCrawled.put(link, true);
+                    linksCrawled.add(link);
+                    Files.write(linksCrawledPath, (link.toString() + "\n").getBytes(), StandardOpenOption.APPEND);
 
-            List<String> lines = Files.readAllLines(linksToCrawlPath);
-            if (lines.size() > 0) {
-                lines.remove(0);
-            }
-            Files.write(linksToCrawlPath, (String.join("\n", lines)).getBytes());
-
-            Request req = new Request(link);
-            Page page = req.getPage();
-
-            if (page != null) {
-                System.out.println("Thread "+ threadNum + " crawled " + link);
-
-                // System.out
-                // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
-
-                // System.out.println("text");
-                // System.out.println(page.getTextContent());
-                String content = page.getTextContent();
-                if (content.length() > 200) {
-                    Files.write(pagesDir.resolve(URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
-                    content.getBytes());
-                }
-
-
-
-                for (URL linkToAdd : page.getLinks()) {
-                    if (alreadyCrawled.get(linkToAdd.toString()) == null) {
-                        linksToCrawl.add(linkToAdd.toString());
-                        alreadyCrawled.put(linkToAdd.toString(), true);
-
-                        Files.write(linksToCrawlPath, (linkToAdd.toString() + "\n").getBytes(),
-                                StandardOpenOption.APPEND);
+                    List<String> lines = Files.readAllLines(linksToCrawlPath);
+                    if (lines.size() > 0) {
+                        lines.remove(0);
                     }
+                    Files.write(linksToCrawlPath, (String.join("\n", lines)).getBytes());
+
+                    Request req = new Request(link);
+                    Page page = req.getPage();
+
+                    if (page != null) {
+                        System.out.println("Thread " + threadNum + " crawled " + link);
+
+                        // System.out
+                        // .println(pagesDir.resolve(Base64.getEncoder().encodeToString(link.toString().getBytes())));
+
+                        // System.out.println("text");
+                        // System.out.println(page.getTextContent());
+                        String content = page.getTextContent();
+                        if (content.length() > 5000) {
+                            Files.write(
+                                    pagesDir.resolve(
+                                            URLEncoder.encode(link.toString(), Charset.defaultCharset()) + ".txt"),
+                                    content.getBytes());
+                        }
+
+                        for (URL linkToAdd : page.getLinks()) {
+                            if (alreadyCrawled.get(linkToAdd.toString()) == null) {
+                                linksToCrawl.add(linkToAdd.toString());
+                                alreadyCrawled.put(linkToAdd.toString(), true);
+
+                                Files.write(linksToCrawlPath, (linkToAdd.toString() + "\n").getBytes(),
+                                        StandardOpenOption.APPEND);
+                            }
+                        }
+                    }
+                } else {
+                    Thread.sleep(1000);
                 }
+            } catch (Exception e) {
+                System.out.println("Exception in thread " + threadNum);
+                System.out.println(e);
             }
-        } catch(Exception e) {
-            System.out.println("Exception in thread " + threadNum);
-            System.out.println(e);
-        }
         }
     }
 }
