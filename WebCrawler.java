@@ -152,6 +152,7 @@ public class WebCrawler extends Thread {
                 pagesDir = Paths.get(args[2]);
 
                 Files.createDirectories(pagesDir);
+                Files.createFile(linksCrawledPath);
 
                 Scanner reader = new Scanner(linksToCrawlFile);
                 while (reader.hasNextLine()) {

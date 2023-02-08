@@ -1,2 +1,4 @@
 *.class
 pages
+crawled-pages.txt
+to-crawl.txt
